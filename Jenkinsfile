@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Clone Git') {
             steps {
-                git 'https://github.com/SilverSurge/SummationPipeline.git'
+                git branch: 'main', 
+                    url: 'https://github.com/SilverSurge/SummationPipeline.git'
             }
         }
         stage('Build Code') {
